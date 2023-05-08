@@ -17,6 +17,7 @@ import android.text.style.StyleSpan
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.widget.AppCompatButton
 import com.example.projetofiap.databinding.ActivityMainBinding
 import com.google.android.gms.common.SignInButton
 import com.google.android.material.snackbar.Snackbar
@@ -27,6 +28,7 @@ import com.google.firebase.ktx.Firebase
 class MainActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
+    private lateinit var binding: ActivityMainBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,13 +42,11 @@ class MainActivity : AppCompatActivity() {
 
         auth = Firebase.auth
 
-        val btnLogin = findViewById<SignInButton>(R.id.btEntrar)
+        val btnLogin = findViewById<AppCompatButton>(R.id.btEntrar)
         btnLogin.setOnClickListener {
             signIn()
         }
 
-        //PARTE DO CADASTRE-SE NAO ALTERAR
-        //PARTE DO CADASTRE-SE NAO ALTERAR
         val textViewCadastro = findViewById<TextView>(R.id.textViewCadastro)
 
         val texto = "Não tem conta? Cadastre-se."
@@ -71,13 +71,11 @@ class MainActivity : AppCompatActivity() {
 
         textViewCadastro.text = spannable
         textViewCadastro.movementMethod = LinkMovementMethod.getInstance()
-        //PARTE DO CADASTRE-SE NAO ALTERAR
-        //PARTE DO CADASTRE-SE NAO ALTERAR
     }
 
     private fun signIn() {
-        val email = editEmail.text.toString()
-        val password = editSenha.text.toString()
+        val email = binding.editEmail.text.toString()
+        val password = binding.editSenha.text.toString()
 
         if (email.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "Por favor, preencha todos os campos", Toast.LENGTH_SHORT).show()
