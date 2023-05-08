@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "625651862631",
+    "project_id": "projeto-fiap-de29e",
+    "storage_bucket": "projeto-fiap-de29e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:625651862631:android:762ceaef969b7895ef18c2",
+        "android_client_info": {
+          "package_name": "com.example.projetofiap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "625651862631-ohmmal8qic8sec7j1b9r3lsqcb92vo52.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkgQritQGbtsG-CTjHOs6SF1LDrYvO-Q4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "625651862631-ohmmal8qic8sec7j1b9r3lsqcb92vo52.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
